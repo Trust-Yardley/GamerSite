@@ -59,9 +59,9 @@
     top: 0;
     right: -10%;
     background-color: #333;
-    height: 55vh;
     width: 10%;
     transition: right .5s;
+    padding-bottom: 20px;
 }
 
 .off-screen-menu.active{
