@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body{
+            margin: 0;
+        }
+
+        .menu{
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            justify-content: space-between;
+            height: 100vh;
+        }
+
+        .ps{
+            background-image: url(media/ExplorePage/PlayStationLogo.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-top: 100px;
+            width: 33.33%;
+            transition: 2s;
+        }
+
+        .pc{
+            background-image: url(media/ExplorePage/steam-logo.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-top: 180px;
+            width: 33.33%;
+            transition: 2s;
+        }
+
+        .xb{
+            background-image: url(media/ExplorePage/XboxLogo.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-top: 210px;
+            width: 33.33%;
+            transition: 2s;
+        }
+
+        .active{
+            transition: 2s;
+            width: 45%;
+        }
+
+        @media(max-width:1679px) {
+            .ps{
+                margin-top: 110px;
+            }
+        }
+
+        @media(max-width:1357px) {
+            .ps{
+                margin-top: 125px;
+            }
+        }
+
+        @media(max-width:1145px) {
+            .ps{
+                margin-top: 140px;
+            }
+
+            .pc{
+                margin-top: 190px;
+            }
+        }
+
+        @media(max-width:961px) {
+            .ps{
+                margin-top: 150px;
+            }
+        }
+
+        @media(max-width:844px) {
+            .ps{
+                margin-top: 160px;
+            }
+
+            .pc{
+                margin-top: 195px;
+            }
+        }
+
+        @media(max-width:667px) {
+            .ps{
+                margin-top: 170px;
+            }
+
+            .pc{
+                margin-top: 197px;
+            }
+        }
+
+        @media(max-width:543px) {
+            .ps{
+                margin-top: 175px;
+            }
+
+            .pc{
+                margin-top: 200px;
+            }
+        }
+
+        @media(max-width:487px) {
+            .ps{
+                margin-top: 180px;
+            }
+        }
+
+        @media(max-width:369px) {
+            .ps{
+                margin-top: 185px;
+            }
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+
+    <div class="menu">
+
+        <a href="https://www.playstation.com/en-us/ps5/games/?smcid=pdc%3Aen-us%3Aps4-ps4-games%3Aprimary%20nav%3Amsg-ps5%3Agames" class="box ps"></a>
+        <a href="https://store.steampowered.com/" class="box pc"></a>
+        <a href="https://www.xbox.com/en-US/games " class="box xb"></a>
+
+    </div>
+    
+
+    <script>
+        document.querySelectorAll(".box").forEach(box=>{
+            box.addEventListener('mouseover', (ev) => {
+                reset();
+                let box = ev.target;
+                box.classList.add('active')
+                //box.style.background = "red";
+                console.log(box)
+            })
+        })
+
+
+        let reset = function(){
+            document.querySelectorAll(".box").forEach(box=> {
+                //box.style.background = "white";
+                box.classList.remove('active');
+
+            })
+        }
+
+
+        // console.log(boxes)
+    </script>
+</body>
+</html>
